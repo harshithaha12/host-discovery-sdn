@@ -159,42 +159,42 @@ Install the following:
 ```bash
 sudo apt update
 sudo apt upgrade -y
-
+```
 ## Install Mininet
 
 ```bash
 sudo apt install mininet -y
-
+```
 ## Install Python and Python Tools
 
 ```bash
 sudo apt install python3 python3-pip git -y
-
+```
 ## Install Open vSwitch
 
 ```bash
 sudo apt install openvswitch-switch -y
-
+```
 ## Install Ryu Controller
 
 ```bash
 pip3 install ryu
-
+```
 ## Verify Mininet Installation
 
 ```bash
 sudo mn
-
+```
 ## Test Connectivity Inside Mininet
 
 ```bash
 pingall
-
+```
 ## Exit Mininet
 
 ```bash
 exit
-
+```
 ---
 
 # How to Run the Project
@@ -204,13 +204,13 @@ exit
 ```bash
 cd host-discovery-sdn
 ryu-manager controller.py
-
+```
 ## Start Mininet Topology
 
 ```bash
 cd host-discovery-sdn
 sudo mn --custom topo.py --topo simpletopo --controller remote
-
+```
 
 # Demo Commands
 
@@ -218,32 +218,39 @@ sudo mn --custom topo.py --topo simpletopo --controller remote
 
 ```bash
 h1 ping -c 1 h2
-
+```
 ## Allowed Communication
 
 ```bash
 h1 ping -c 3 h2
-
+```
 ## Blocked Communication
 
 ```bash
 h3 ping -c 3 h1
-
+```
 ## Full Connectivity Test
 
 ```bash
 pingall
-
+```
 ## Throughput Test
 
 ```bash
 iperf h1 h2
-
+```
 ## Flow Rule Changes
 
 ```bash
 sudo ovs-ofctl -O OpenFlow13 dump-flows s1
-
+```
 ---
 
+```
 
+```
+# 8. Conclusion
+
+This project successfully demonstrates a Host Discovery Service using Software Defined Networking (SDN) using Mininet and the Ryu Controller. The controller dynamically discovers hosts, learns their locations, installs forwarding rules, and updates network information in real time. It also enforces firewall policies by blocking unauthorized communication and provides traffic prioritization through QoS-based flow rules.
+
+By separating the control plane from the data plane, the project highlights how SDN enables centralized management, programmability, improved visibility, and efficient traffic handling. Overall, the implementation proves that SDN is a flexible and scalable approach for building intelligent and secure modern networks.
