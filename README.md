@@ -205,12 +205,17 @@ exit
 cd host-discovery-sdn
 ryu-manager controller.py
 ```
+<img width="738" height="278" alt="Screenshot 2026-04-20 203825" src="https://github.com/user-attachments/assets/cd81fc63-f3d5-4f77-9697-bdabc2a7dddd" />
+
+
 ## Start Mininet Topology
 
 ```bash
 cd host-discovery-sdn
 sudo mn --custom topo.py --topo simpletopo --controller remote
 ```
+<img width="940" height="518" alt="image" src="https://github.com/user-attachments/assets/eabce5a1-293e-46ae-8786-3c48ba0ed41b" />
+
 
 # Demo Commands
 
@@ -224,11 +229,21 @@ h1 ping -c 1 h2
 ```bash
 h1 ping -c 3 h2
 ```
+<img width="940" height="261" alt="image" src="https://github.com/user-attachments/assets/3c181715-bcc2-428a-ba70-7b0db9ddeb92" />
+<img width="940" height="392" alt="image" src="https://github.com/user-attachments/assets/f05aa205-1d56-4a91-8b11-234ffdb1845e" />
+
+
+
 ## Blocked Communication
 
 ```bash
 h3 ping -c 3 h1
 ```
+<img width="940" height="187" alt="image" src="https://github.com/user-attachments/assets/f17c3f03-9730-4a44-8643-c077f5afda25" />
+<img width="940" height="547" alt="image" src="https://github.com/user-attachments/assets/c3423112-8f77-42d6-bde4-17150eea8aa1" />
+
+
+
 ## Full Connectivity Test
 
 ```bash
@@ -239,12 +254,25 @@ pingall
 ```bash
 iperf h1 h2
 ```
+<img width="940" height="99" alt="image" src="https://github.com/user-attachments/assets/bd0e0bf8-c781-42fc-b46a-be46549edabe" />
+
+
 ## Flow Rule Changes
 
 ```bash
 sudo ovs-ofctl -O OpenFlow13 dump-flows s1
 ```
+<img width="940" height="436" alt="image" src="https://github.com/user-attachments/assets/73f3add9-b9a2-4c41-b3b7-1a0cdb8a37dd" />
+
+
 ---
+## exit 
+
+'''bash
+exit
+'''
+<img width="913" height="344" alt="image" src="https://github.com/user-attachments/assets/e775a65a-64ea-44dc-9b0c-535e6772421b" />
+
 
 ```
 
